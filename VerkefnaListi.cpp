@@ -5,51 +5,40 @@ VerkefnaListi::VerkefnaListi() {
 }
 
 void VerkefnaListi::setjaILista(string lysing, bool skola_verkefni, int mikilvaegt ) {
-    if (this->erILista(lysing)) return;
     if (this->head == nullptr) {
         this->head = new VerkefniNode(lysing, skola_verkefni, mikilvaegt);
     }
     else {
         VerkefniNode* nyttNode = new VerkefniNode(lysing, skola_verkefni, mikilvaegt);
-        if (nyttNode->verkefni_data < this->head -> verkefni_data) {
+        if (nyttNode->verkefni_ < this->head -> verkefni_data) {
             nyttNode->next = this->head;
             this->head = nyttNode;
         }
-        else {
-            VerkefniNode* current = this->head;
-            VerkefniNode* prev = this->head;
-            while (current && current->verkefni_data.get_lysing() < lysing) {
-                prev = current;
-                current = current->next;
-            }
-            prev->next = nyttNode;
-            nyttNode->next = current;
-        }
+        
     }
 }
 
-// falliğ eyğir staki meğ id úr listanum
-void VerkefnaListi::eydaUrLista(string lysing) {
-    if (!this->erILista(lysing)) return;
-    if (this->head->verkefni_data.get_lysing() == lysing) {
-        // TODO
-    }
-    else {
-        // TODO 
-    }
+
+
+
+
+// falliÃ° skrifar listann Ãºt Ã¡ skjÃ¡
+
+void VerkefnaListi::prentaOllverkefni() {
+    
+    cout << "Oll verkefni : " << endl;
 }
 
-// falliğ skilar true ef stak meğ id er í listanum annars false
-bool VerkefnaListi::erILista(string lysing) {
-    // TODO
+void VerkefnaListi::prentaSkolaverkefni() {
+    cout << "skolaverkefni : " << endl;
 }
 
-// falliğ skrifar listann út á skjá
-void VerkefnaListi::prentaLista() {
-    // TODO
+
+void VerkefnaListi::prentaEkkiSkolaverkefni() {
+    cout << "Verkefni onnur en skolaverkefni : " << endl;
 }
 
-// destructorinn eyğir öllum Node-unum úr listanum
+
 VerkefnaListi::~VerkefnaListi() {
-    // TODO
+    
 }
