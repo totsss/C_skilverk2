@@ -9,11 +9,11 @@ public:
 
     void setjaILista(string lysing, bool skola_verkefni, int mikilvaegt);
 
-    void eydaUrLista(string lysing);
+    void prentaOllverkefni();
 
-    bool erILista(string lysing);
+    void prentaSkolaverkefni();
 
-    void prentaLista();
+    void prentaEkkiSkolaverkefni();
 
     ~VerkefnaListi();
 
