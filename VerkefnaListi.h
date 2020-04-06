@@ -6,16 +6,19 @@ private:
     VerkefniNode* head;
 
 public:
+    
+    VerkefnaListi();
+    void setjaILista(Verkefni x);
 
     void setjaILista(string lysing, bool skola_verkefni, int mikilvaegt);
 
-    void prentaOllverkefni();
+    void prentaOllVerkefni();
 
     void prentaSkolaverkefni();
 
     void prentaEkkiSkolaverkefni();
-
-    ~VerkefnaListi();
-
+     
+    void faNaestaVerkefni();
+    
 
 };

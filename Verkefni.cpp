@@ -12,6 +12,20 @@ void Verkefni::set_lysing(string lysing_pub) {
 	this->lysing = lysing_pub;
 };
 
+Verkefni::Verkefni()
+{
+	this->lysing = "";
+	this->skola_verkefni = false;
+	this->mikilvaegt = 0;
+}
+
+Verkefni::Verkefni(string lysing_pub, bool skola_verkefni_pub, int mikilvaegt_pub)
+{
+	this->lysing = lysing_pub;
+	this->skola_verkefni = skola_verkefni_pub;
+	this->mikilvaegt = mikilvaegt_pub;
+}
+
 string Verkefni::get_lysing() {
 	return this->lysing;
 }
